@@ -20,8 +20,39 @@ class WebApplication
         if(empty($action)){
             $action = filter_input(INPUT_POST, 'action');
         }
-
+        $id = filter_input(INPUT_GET, 'id');
+        if(empty($action)){
+            $action = filter_input(INPUT_POST, 'id');
+        }
         switch($action){
+
+            case 'editForm':
+                $this->mainController->editFormAction($id);
+                break;
+
+            case 'question3a':
+                $this->mainController->question3aAction();
+                break;
+
+            case 'question3b':
+                $this->mainController->question3bAction();
+                break;
+
+            case 'question3c':
+                $this->mainController->question3cAction();
+                break;
+
+            case 'question3d':
+                $this->mainController->question3dAction();
+                break;
+
+            case 'question3e':
+                $this->mainController->question3eAction();
+                break;
+
+            case 'question3f':
+                $this->mainController->question3fAction();
+                break;
 
 
             case 'home':

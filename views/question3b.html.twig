@@ -1,0 +1,24 @@
+<!DOCtype html>
+<html lang ="en">
+<head>
+    <title>3B</title>
+</head>
+
+<body>
+<a href = 'index.php'>Home</a>
+<hr>
+{% if month == jan %}
+    New Year SALE
+{% endif %}
+
+{% if month == 'june' %}
+    Summer SALE
+{% endif %}
+
+{% if month is empty %}
+    Stock clearance SALE
+{% endif %}
+
+
+</body>
+</html>

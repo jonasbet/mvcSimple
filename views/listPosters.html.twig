@@ -1,0 +1,28 @@
+<!DOCtype html>
+<html lang ="en">
+<head>
+    <title>Poster List</title>
+</head>
+
+<body>
+<a href = 'index.php'>Home</a>
+<a href = 'index.php?action=question3a'>3A</a>
+<a href = 'index.php?action=question3b'>3B</a>
+<a href = 'index.php?action=question3c'>3C</a>
+<a href = 'index.php?action=question3d'>3D</a>
+<a href = 'index.php?action=question3e'>3E</a>
+<a href = 'index.php?action=question3f'>3F</a>
+
+
+
+
+<hr>
+<ul>
+    {% for poster in posters %}
+        <li><img src = 'images/{{ poster.imageName }}'> &euro; {{ poster.price }}
+            <a href = "index.php?action=editForm&id={{ poster.id }}">EDIT</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
