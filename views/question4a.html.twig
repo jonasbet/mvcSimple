@@ -1,0 +1,19 @@
+<!DOCtype html>
+<html lang ="en">
+<head>
+    <title>4A</title>
+</head>
+
+<a href = 'index.php'>Home</a>
+<hr>
+
+{% if isLoggedIn == true %}
+<a href ='index.php?action=adminHome'>Admin Home</a>
+{% endif %}
+
+{% if isLoggedIn == false  %}
+    <a href ='index.php'>Home</a>
+{% endif %}
+
+</body>
+</html>

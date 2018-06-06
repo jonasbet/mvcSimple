@@ -94,9 +94,11 @@ class MainController
         print $html;
     }
 
-    public function question3fAction(){
-        $template = 'question3f.html.twig';
+    public function question4aAction(){
+        $template = 'question4a.html.twig';
+        $isLoggedIn = true;
         $args = [
+            'isLoggedIn' => $isLoggedIn
         ];
 
         $html = $this->twig->render($template, $args);
